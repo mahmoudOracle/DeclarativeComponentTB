@@ -2,23 +2,10 @@
 <af:componentDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs" componentVar="comp" definition="private"
                  xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component">
     <af:toolbar id="dc_t1">
-        <af:group id="dc_g2">
-            <af:button id="dc_b8" shortDesc="Commit" icon="/images/accept.png" action="#{dml.Commit}"
-                       visible="#{attrs.DMLCommit}">
-                <af:setPropertyListener from="#{attrs.IteratorName}" to="#{dml.methodNameorIteratorBinding}"
-                                        type="action"/>
-            </af:button>
-            <af:button id="dc_b7" shortDesc="Rollback" icon="/images/repeat.png" action="#{dml.Rollback}"
-                       immediate="true" visible="#{attrs.DMLRollback}">
-                <af:setPropertyListener from="#{attrs.IteratorName}" to="#{dml.methodNameorIteratorBinding}"
-                                        type="action"/>
-            </af:button>
-            <af:spacer width="30" height="30" id="dc_s5"/>
-        </af:group>
         <af:group id="dc_g1">
             <af:button id="dc_b9" shortDesc="info" icon="/images/information.png" action="#{dml.information}"/>
             <af:facetRef facetName="Add Area"/>
-            <af:spacer width="30" height="30" id="dc_s3"/>
+            <af:spacer width="10" height="10" id="dc_s3"/>
             <af:button id="dc_b1" shortDesc="Delete" icon="/images/remove.png" action="#{dml.Delete}" immediate="true"
                        visible="#{attrs.DMLDeleteVisable}">
                 <af:setPropertyListener from="#{attrs.IteratorName}" to="#{dml.methodNameorIteratorBinding}"
@@ -53,6 +40,18 @@
                                         type="action"/>
             </af:button>
             <af:spacer width="5" height="10" id="dc_s2"/>
+        </af:group>
+        <af:group id="dc_g2">
+            <af:button id="dc_b8" shortDesc="Commit" icon="/images/accept.png" action="#{dml.Commit}"
+                       visible="#{attrs.DMLCommit}">
+                <af:setPropertyListener from="#{attrs.IteratorName}" to="#{dml.methodNameorIteratorBinding}"
+                                        type="action"/>
+            </af:button>
+            <af:button id="dc_b7" shortDesc="Rollback" icon="/images/repeat.png" action="#{dml.Rollback}"
+                       immediate="true" visible="#{attrs.DMLRollback}">
+                <af:setPropertyListener from="#{attrs.IteratorName}" to="#{dml.methodNameorIteratorBinding}"
+                                        type="action"/>
+            </af:button>
         </af:group>
     </af:toolbar>
     <af:xmlContent>
